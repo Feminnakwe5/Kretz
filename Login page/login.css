@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+#mobile-login {
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center; */
+}
+.mobile-logo {
+  background-color: var(--back-color);
+}
+.mobile-logo img {
+  width: 50px;
+  border-radius: 50%;
+}
+#login-form p {
+  margin: 20px;
+}

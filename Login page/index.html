@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kretz login page</title>
-    <link rel="stylesheet" href="/Login page/reset.css" />
+    <link rel="stylesheet" href="/universal/reset.css" />
+    <link rel="stylesheet" href="/universal/variables.css" />
     <link rel="stylesheet" href="/Login page/login.css" />
   </head>
   <body>
-    <header></header>
+      <div id="mobile-login">
+    <header>
+       <div class="mobile-logo">       
+        <img src="/Login page/Kretzlogo.jpeg" alt="mobile-logo"/>
+       </div>
+    </header>
     <main>
       <!-- <nav class="nav-bar">
         <a href="#Kretz">Kretz</a>
@@ -20,14 +26,16 @@
         <input type="button" value="Sign Up" />
       </nav> -->
 
-      <form action="" method="post" class="form">
-        <p>LOGIN</p>
-        <input type="email" name="" id="" />
-
-        <input type="password" />
-        <input type="button" value="Login" />
-        <p>no ID? <span>signup</span></p>
+      <form action="" method="post" class="form" id="login-form">
+       <ul>
+        <li><p>LOGIN</p></li>
+        <li><input type="email" name="email" id="" class="mobile"/></li>
+        <li> <input type="password" class="mobile"/> </li>
+        <li><input type="button" value="Login" class="mobile"/></li>
+        <li><p class="mobile">no ID? <span>signup</span></p></li>
+       </ul>
       </form>
+      </div>
     </main>
   </body>
 </html>
