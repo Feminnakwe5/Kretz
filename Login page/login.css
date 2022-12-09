@@ -1,3 +1,27 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+  grid-template-areas:
+    'nav nav nav nav'
+    'info info login login'
+    'info info login login'
+    'info info login login'
+    'info info login login';
+}
+
+.nav {
+  grid-area: nav;
+}
+.info {
+  grid-area: info;
+}
+.login {
+  grid-area: login;
+}
+
+
 #mobile-login {
   display: flex;
   flex-direction: column;
@@ -44,7 +68,7 @@ ul #button {
   }
   .nav-bar ul {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between; 
     flex-direction: row;
     padding: 10px;
     margin-bottom: 20px;
@@ -65,4 +89,14 @@ ul #button {
     border-radius: 10px;
     border: 1px solid var(--input-color);
   }
-}
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+  }
+  main img {
+    max-width: 500px;
+    max-height: 500px;
+  }
+} */
+
