@@ -1,19 +1,68 @@
-body {
-  display: flex;
-  justify-content: center;
-}
 #mobile-login {
-  /* display: flex;
-  flex-direction: column; */
-  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 425px;
 }
 .mobile-logo {
   background-color: var(--back-color);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid black;
 }
 .mobile-logo img {
   width: 50px;
   border-radius: 50%;
 }
-#login-form p {
-  margin: 20px;
+#login-form {
+  text-align: center;
+  border: 1px solid black;
+}
+
+ul .mobile {
+  margin: 50px;
+}
+
+ul #fill {
+  background: var(--input-color);
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+}
+ul #button {
+  background-color: var(--back-color);
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+}
+
+@media only screen and (min-device-width: 425px) {
+  .nav-bar {
+    display: block;
+  }
+  .nav-bar ul {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  nav li:not(:nth-of-type(2)) {
+    padding-right: 5px;
+    margin-left: 40px;
+  }
+  .nav-bar ul img {
+    width: 20px;
+  }
+
+  nav input[type='search'] {
+    width: 400px;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid var(--input-color);
+  }
 }
