@@ -1,32 +1,31 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(4 1fr);
-  grid-template-rows: auto;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    'nav nav nav nav'
-    'info info login login'
-    'info info login login'
-    'info info login login'
-    'info info login login';
+    'login login login login'
+    'login login login login'
+    'login login login login'
+    'login login login login';
 }
 
 .nav {
-  grid-area: nav;
+  display: none;
 }
+
 .info {
-  grid-area: info;
+  display: none;
 }
 .login {
   grid-area: login;
+  max-width: 400px;
+  margin: 10px;
 }
 
-
-#mobile-login {
+.login {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 425px;
+  /* max-width: 250px; */
 }
 .mobile-logo {
   background-color: var(--back-color);
@@ -62,13 +61,37 @@ ul #button {
   font-size: 24px;
 }
 
-@media only screen and (min-device-width: 425px) {
-  .nav-bar {
+@media screen and (min-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    gap: 10px;
+    grid-template-areas:
+      'nav nav nav nav'
+      'info info login login'
+      'info info login login'
+      'info info login login'
+      'info info login login';
+  }
+
+  .nav {
+    grid-area: nav;
     display: block;
   }
-  .nav-bar ul {
+  .info {
+    grid-area: info;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    display: grid;
+  }
+
+  .nav {
+    display: block;
+  }
+  .nav ul {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     flex-direction: row;
     padding: 10px;
     margin-bottom: 20px;
@@ -79,7 +102,7 @@ ul #button {
     padding-right: 5px;
     margin-left: 40px;
   }
-  .nav-bar ul img {
+  .nav ul img {
     width: 20px;
   }
 
@@ -89,14 +112,11 @@ ul #button {
     border-radius: 10px;
     border: 1px solid var(--input-color);
   }
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-around;
-  }
-  main img {
-    max-width: 500px;
-    max-height: 500px;
-  }
-} */
 
+  .info img {
+    width: 510px;
+    height: 420px;
+    grid-column: 1/2;
+    grid-row: 2/5;
+  }
+}
