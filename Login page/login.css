@@ -1,3 +1,9 @@
+body {
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/******mobile********/
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -61,10 +67,10 @@ ul #button {
   font-size: 24px;
 }
 
-span {
+.login span {
   color: var(--link);
 }
-
+/******* desktop**********/
 @media screen and (min-width: 600px) {
   .container {
     display: grid;
@@ -102,19 +108,24 @@ span {
     align-items: center;
   }
 
-  nav li:not(:nth-of-type(2)) {
-    padding-right: 5px;
-    margin-left: 40px;
+  .nav li:not(:nth-of-type(2)) {
+    /* margin-left: 40px; */
+    margin-right: 10px;
   }
   .nav ul img {
     width: 20px;
   }
 
-  nav input[type='search'] {
+  .nav input[type='search'] {
     width: 400px;
     height: 35px;
     border-radius: 10px;
     border: 1px solid var(--input-color);
+  }
+
+  .nav li:first-child {
+    vertical-align: middle;
+    float: left;
   }
 
   .info img {
