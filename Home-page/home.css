@@ -1,0 +1,103 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 50px 50px 100px 100px 100px; */
+  grid-gap: 6px;
+  /* overflow: inherit; */
+  grid-template-areas:
+    'nav nav nav'
+    'profile profile profile'
+    'to-do chats chats'
+    'to-do chats chats'
+    'to-do chats chats';
+}
+
+.box {
+  background-color: var(--back-color);
+}
+
+.nav {
+  grid-area: nav;
+}
+.profile {
+  grid-area: profile;
+}
+.chats {
+  grid-area: chats;
+}
+.to-do {
+  grid-area: to-do;
+}
+/***** nav bar****/
+
+.nav ul {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.nav li:not(:nth-of-type(2)) {
+  /* margin-left: 40px; */
+  margin-right: 10px;
+}
+.nav ul img {
+  width: 20px;
+}
+
+.nav input[type='search'] {
+  width: 400px;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid var(--input-color);
+}
+
+/* .nav li:first-child {
+    vertical-align: middle;
+    float: left;
+  } */
+
+.nav ul #get-button {
+  border-radius: 10px;
+  width: 150px;
+  height: 35px;
+  background-color: white;
+  border-color: var(--highlight);
+  font-weight: 10px;
+}
+
+.nav ul #sign-up-button {
+  border-radius: 10px;
+  width: 100px;
+  height: 35px;
+  background-color: var(--back-color);
+  /* border-color: var(--highlight); */
+}
+
+/***** profile *****/
+.box .profile {
+  display: flex;
+  justify-content: center;
+}
+.profile img {
+  border-radius: 80px;
+  margin-left: 40px;
+  align-items: center;
+}
+@media screen and (min-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 100px 100px 100px;
+    grid-gap: 6px;
+    grid-template-areas:
+      'nav nav nav'
+      'profile chats chats'
+      'profile chats chats'
+      'to-do chats chats'
+      'to-do chats chats';
+  }
+}
