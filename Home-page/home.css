@@ -1,8 +1,13 @@
+body {
+  padding: 10px;
+}
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-rows: 50px 50px 100px 100px 100px; */
+  grid-template-rows: 10% 10% 40% 40%;
   grid-gap: 6px;
+  width: 100vw;
+  height: 100vh;
   /* overflow: inherit; */
   grid-template-areas:
     'nav nav nav'
@@ -13,7 +18,7 @@
 }
 
 .box {
-  background-color: var(--back-color);
+  /* background-color: var(--back-color); */
 }
 
 .nav {
@@ -21,6 +26,7 @@
 }
 .profile {
   grid-area: profile;
+  background-color: var(--input-color);
 }
 .chats {
   grid-area: chats;
@@ -38,6 +44,8 @@
   padding: 10px;
   margin-bottom: 20px;
   align-items: center;
+  width: inherit;
+  height: inherit;
 }
 
 .nav li:not(:nth-of-type(2)) {
@@ -87,11 +95,28 @@
   margin-left: 40px;
   align-items: center;
 }
+
+/* ****TO-do list*** */
+#list {
+  display: flex;
+  justify-content: center;
+}
+.to-do ul li {
+  margin: 30px 5px;
+}
+.to-do ul h1 {
+  background-color: var(--back-color);
+  height: 100px;
+}
+
+.to-do ul ol {
+  list-style-image: ;
+}
 @media screen and (min-width: 600px) {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 50px 100px 100px 100px;
+    grid-template-rows: 10% 10% 40% 40%;
     grid-gap: 6px;
     grid-template-areas:
       'nav nav nav'
