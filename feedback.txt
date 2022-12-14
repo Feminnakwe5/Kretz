@@ -1,0 +1,38 @@
+Requirements:
+[Y/G] Use Flexbox or Grid system layout for the basic structure of your elements
+[R] Be able to navigate to the different pages. For example, clicking on "Login" should bring me to the login page, filling out the information and clicking "login" should then lead me to the dashboard page. Then, clicking "logout" should bring me back to the home page.
+[R] You will have 4 pages that are responsive to screen sizes. Each page will include both mobile and desktop views.
+[G] Separate your CSS files by pages. Do NOT have one giant CSS file
+
+_ Hardcode any text and don't worry about getting information from somewhere else (...for now)
+_ You CAN use reusable components from Bootstrap
+_ If you want to make something different from your mockup, that's fine, just don't change too much without keeping track of your changes and modifying the mockup if need be.
+
+General
+_ File/folder naming conventions
+  -> no spaces
+  -> no capitalized first letters
+  -> DO camelCase
+      -or-
+  -> Do hyphen-names
+_ assets/ folder to hold assets
+_ missing 4th page
+_ !! INCOMPLETE !!
+
+home.html 
+_ incomplete
+_ single view
+
+index.html (login)
+_ responsive
+_ grid layout
+
+sign.html
+_ responsive
+_ grid layout
+_ remove lines 8 - 9 ->  hanging/unpaired tags
+_ Should be distinct from the login. 
+  -> New users require more information to create a new account.
+  -> As it is, this page is a repeat of the login page.
+
+?? dashboard/landing pg ??
